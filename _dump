@@ -1,0 +1,6 @@
+        //Gate::check('create_task')|| Gate::check('view_task')|| Gate::check('edit_task')|| Gate::check('delete_task')
+        if ( Gate::allows('view_task')) { 
+        }
+        else {
+            return redirect()->back()->withErrors("You are not authorized for this action");
+        }

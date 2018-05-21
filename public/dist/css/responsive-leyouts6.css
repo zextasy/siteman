@@ -1,0 +1,119 @@
+/* Responsive CSS Styles Table of Contents */
+
+
+@media only screen and (min-width: 1000px) and (max-width: 1169px){
+a.logo {
+    margin: 1px 0px 0px 50px;
+}
+
+
+.button2 {
+	display:none;
+}
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 999px){
+	
+	.sticky-wrapper{ height:500px;}
+	
+.container{ width:94%;}
+
+.logo {
+	width: 50%;
+}
+.menu_main {
+	width: 97%;
+	position: absolute;
+}
+
+
+.button2 {
+	display:none;
+}
+
+
+} 
+
+
+
+@media only screen and (min-width: 640px) and (max-width: 767px){
+
+
+.container{ width:94%;}
+.logo {
+	width: 50%;
+}
+.menu_main {
+	width: 97%;
+	position: absolute;
+}
+.button2 {
+	display:none;
+}
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px){
+	
+.container{ width:94%;}
+
+.logo {
+	width: 100%;
+}
+.menu_main {
+	width: 97%;
+	position: absolute;
+}
+.button1 {
+	padding: 12px 13px;
+	font-size: 11px;
+}
+.button2 {
+	display:none;
+}
+.features_section-2 h1 {
+	font-size: 22px;
+	font-weight: 500;
+}
+.features_section-2 h2 {
+	font-size: 18px;
+}
+.button2 {
+	display:none;
+}
+
+}
+
+
+@media only screen and (max-width: 479px){
+
+.container{ width:94%;}
+.logo {
+	width: 100%;
+}
+.menu_main {
+	width: 97%;
+	position: absolute;
+}
+.button1 {
+	padding: 12px 13px;
+	font-size: 11px;
+}
+.button2 {
+	display:none;
+}
+.features_section-2 h1 {
+	font-size: 22px;
+	font-weight: 500;
+}
+.features_section-2 h2 {
+	font-size: 18px;
+}
+
+
+.button2 {
+	display:none;
+}
+}

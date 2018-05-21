@@ -1,0 +1,400 @@
+/*body {
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+	background: #cf5bd4;
+}
+*/
+
+.navbar-brand {
+	float: left;
+	padding: 0px 0px;
+	background:url(../../images/logo.png) no-repeat left;
+}
+.navbar-brand img {
+display:none;
+transition: all 0.3s ease-out 0s;
+}
+
+#header .navbar-brand {
+    float: left;
+    height: 34px;
+    width: 172px;
+    padding: 90px 0px 0px 0px;
+
+}
+
+ul.nav > li > a.active {
+    color: #cf5bd4;
+	background: none;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: #cf5bd4; background: none;
+}
+ul.nav>li>a:hover.active {
+	color:#cf5bd4;
+}
+ul.nav > li > a.active:hover {
+ background: none;
+}
+
+#header2 ul.nav > li > a.active {
+    color: #fff;
+	background: #cf5bd4;
+}
+#header2 .navbar-default .navbar-nav > li > a:focus, #header2 .navbar-default .navbar-nav > li > a:hover {
+ background: #cf5bd4; color:#fff;
+}
+ul.nav>li>a.buynowbut,
+.compact .header ul.nav>li>a.buynowbut {
+	color: #fff;
+	border: 1px solid #cf5bd4;
+	background: #cf5bd4;
+	border-radius: 0px;
+}
+ul.nav>li>a.buynowbut:hover,
+.compact .header ul.nav>li>a.buynowbut:hover {
+	color: #fff;
+	border: 1px solid #727272;
+	background: #727272;
+}
+.tp-caption.sbut1 a{
+	background-color:#cf5bd4;
+}
+.text-color-2{
+	color: #cf5bd4;
+}
+.text-color-3{
+	color: #cf5bd4;
+}
+.text-color-4{
+	color: #cf5bd4;
+}
+.linebg_1 {
+	background-color: #cf5bd4;
+}
+.linebg_2 {
+	background-color: #cf5bd4;
+}
+.linebg_4 {
+	background-color: #cf5bd4;
+}
+.linebg_5 {
+	background-color: #cf5bd4;
+}
+.feature_section1  .colorbox1{
+	background: #cf5bd4;
+}
+.feature_section1  .colorbox4{
+	background: #cf5bd4;
+}
+.feature_section1  .btn2{
+	background-color:#cf5bd4;
+}
+.feature_section1  .btn3:hover{
+	background-color:#cf5bd4;
+}
+.feature_section2 .cir1:hover {
+	border: 6px solid rgba(207, 91, 212, 0.5);
+	background: rgba(207, 91, 212, 0.5);
+}
+.feature_section2 .cirbut {
+	background: #cf5bd4;
+}
+.feature_section2 .cirbut2:hover {
+	color: #fff;
+	background: #cf5bd4;
+}
+.smk_accordion .accordion_in.style1.acc_active > .acc_head {
+	color:#cf5bd4;
+	border:1px solid #cf5bd4;
+}
+.ui-progress1 {
+  background-color: #cf5bd4;
+}
+.pricing-box .plan-content .price {
+   color:#cf5bd4;
+}
+.pricing-box .plan-content:hover {
+   -webkit-box-shadow: 12px 12px 12px 0px rgba(207, 91, 212, 0.5);
+-moz-box-shadow: 12px 12px 12px 0px rgba(207, 91, 212, 0.5);
+box-shadow: 12px 12px 12px 0px rgba(207, 91, 212, 0.5);
+}
+.pricing-box .linebtn.one{
+	background-color:#fff;
+	color: #cf5bd4;
+}
+.pricing-box .linebtn.one:hover{
+	border-color: #cf5bd4;
+	background-color:#cf5bd4;
+	color: #fff;
+}
+.feature_section3 .box i:hover {
+	background-color: #cf5bd4;
+}
+.feature_section3 .box i.active {
+	background-color: #cf5bd4;
+}
+.feature_section3 .box .circle:hover {
+	border: solid 8px #cf5bd4;
+}
+.feature_section3 .box .circle.active {
+	border: solid 8px #cf5bd4;
+}
+.team-content p{
+	color:#cf5bd4;
+}
+.team-social a:hover{
+	background-color:#cf5bd4;
+}
+.features_section4 .peoplesays .slidesec h6 {
+	color: #cf5bd4;
+}
+.counters1 i {
+	color: #cf5bd4;
+}
+.counters1 h4 {
+	color: #cf5bd4;
+}
+.feature_section6 {
+	background: #cf5bd4;
+}
+.newsletter1 .input_submit {
+	background-color: #cf5bd4;
+}
+
+
+/*.........................*/
+
+#header2 {
+	background: #cf5bd4 !important;
+}
+.feature_section1 .box:hover,
+.feature_section1 .box.active {
+	border:solid 2px #cf5bd4;
+}
+.feature_section1 .box:hover h2,
+.feature_section1 .box.active h2 {
+	color: #cf5bd4;
+}
+.feature_section1 .box:hover i,
+.feature_section1 .box.active i {
+	background-color: #cf5bd4;
+	border: 2px solid #cf5bd4;
+}
+.feature_section1 .bgline {
+	background-color: #cf5bd4;
+}
+.feature_section1 .linebtn.one:hover,
+.feature_section1 .box:hover .linebtn.one,
+.feature_section1 .box.active  .linebtn.one{
+	border-color: #cf5bd4;
+	background-color:#cf5bd4;
+}
+
+.button.two {
+	background-color:#cf5bd4;
+}
+.feature_section3 .box1 :hover h2,
+.feature_section3 .box1 .active h2{
+	color:#cf5bd4;
+}
+.feature_section3 .box1 :hover .linebg_2,
+.feature_section3 .box1 .active .linebg_2 {
+	background-color: #cf5bd4;
+}
+.feature_section3 .box1 :hover i,
+.feature_section3 .box1 .active i {
+	background-color:#cf5bd4;
+}
+.feature_section3 .box1 :hover .button.one,
+.feature_section3 .box1 .active .button.one{
+	background-color:#cf5bd4;
+}
+
+.feature_section3 .box2 :hover h2,
+.feature_section3 .box2 .active h2{
+	color:#cf5bd4;
+}
+.feature_section3 .box2 :hover .linebg_2,
+.feature_section3 .box2 .active .linebg_2 {
+	background-color: #cf5bd4;
+}
+.feature_section3 .box2 :hover i,
+.feature_section3 .box2 .active i {
+	background-color:#cf5bd4;
+}
+.feature_section3 .box2 :hover .button.one,
+.feature_section3 .box2 .active .button.one{
+	background-color:#cf5bd4;
+}
+.feature_section3 .box3 :hover h2,
+.feature_section3 .box3 .active h2{
+	color:#cf5bd4;
+}
+.feature_section3 .box3 :hover .linebg_2,
+.feature_section3 .box3 .active .linebg_2 {
+	background-color: #cf5bd4;
+}
+.feature_section3 .box3 :hover i,
+.feature_section3 .box3 .active i {
+	background-color:#cf5bd4;
+}
+.feature_section4 i{
+	background-color:#cf5bd4;
+}
+.feature_section5 {
+	background-color:#cf5bd4;
+}
+.footer2 ul.tags li a:hover {
+	color: #cf5bd4;
+	border: 1px solid #cf5bd4;
+}
+.footer2 ul.tags li a.active {
+	color: #cf5bd4;
+	border: 1px solid #cf5bd4;
+}
+
+/*.........................*/
+
+.tp-caption.sbut3 a:hover{
+	background-color:#cf5bd4;
+}
+.single_service:hover {
+	background: #cf5bd4;
+}
+.single_service i {
+    color: #cf5bd4;
+}
+.team-name-holder.bgcolor {
+	background-color: #cf5bd4;
+}
+.price-category h1 {
+	color: #cf5bd4;
+	border-bottom:5px solid #cf5bd4;
+}
+.pricing-table{
+	background: #cf5bd4;
+}
+.table-content {
+	border:solid 12px #cf5bd4;
+}
+.price-category h1 {
+	color: #cf5bd4;
+	border-bottom:5px solid #cf5bd4;
+}
+.pricing-table .btn-2 {
+	background-color:#cf5bd4;
+}
+.subscribe .btn-main {
+    background-color: #cf5bd4;
+}
+
+
+/*.........................*/
+
+.bgcolor06 {
+	background-color:#cf5bd4;
+}
+.feature_section1 i  {
+	color:#cf5bd4;
+}
+.feature_section1 .linebg1 {
+	background-color: #cf5bd4;
+}
+.services  i {
+    color: #cf5bd4;
+}
+.services  i:hover {
+    background: #cf5bd4;
+}
+.price .price-title {
+    background: #cf5bd4 ;
+}
+.btn-1 {
+    background-color:#cf5bd4; !important;
+}
+.parallax-section1 {
+	background-color:#cf5bd4;
+	background-image:none;
+}
+.footer ul.tags li a:hover {
+	color: #cf5bd4;
+	border: 1px solid #cf5bd4;
+}
+.footer ul.tags li a.active {
+	color: #cf5bd4;
+	border: 1px solid #cf5bd4;
+}
+
+/*.........................*/
+
+.text-color-8 {
+	color: #cf5bd4;
+}
+.tp-caption.sbut5 a{
+	border:solid 1px #cf5bd4; 
+}
+.tp-caption.sbut5 a:hover{
+	background-color:#cf5bd4;
+}
+.features_section-one .box:hover {
+	background-color:#cf5bd4;
+}
+.features_section-one .box1:hover {
+	background-color:#cf5bd4;
+}
+.features_section-one  i {
+      color: #cf5bd4;
+}
+.team text {
+    background: #cf5bd4;
+}
+.button1 {
+	background: #cf5bd4;
+}
+.button2 {
+	background: #000;
+}
+.button2:hover {
+	background: #cf5bd4;
+}
+.features_section-two .linebg_1 {
+	background-color: #cf5bd4;
+}
+
+
+/*.........................*/
+
+.text-color-9 {
+	color:#cf5bd4;
+}
+.linebg_6 {
+	background-color: #cf5bd4;
+}
+.feature_section-1 .item-foot .view-iocn a {
+	background: #cf5bd4;
+}
+.features_section-2 .linebg_1 {
+	background-color: #cf5bd4;
+}
+.team-item .caption {
+	background: #cf5bd4;
+}
+.service-boxed:hover {
+	border: solid 1px #cf5bd4;
+	border-right:10px solid #cf5bd4;
+	border-left:10px solid #cf5bd4;
+}
+.border_contact_details_news .follow_icon i:hover{
+	color:#cf5bd4;
+}
+
+.feature_section5 {
+	background: #000;
+}
+.counters1 i {
+	color: #cf5bd4;
+}
+.counters1 h4 {
+	color: #cf5bd4;
+}

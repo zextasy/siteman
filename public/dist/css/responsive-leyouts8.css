@@ -1,0 +1,140 @@
+/* Responsive CSS Styles Table of Contents */
+
+
+@media only screen and (min-width: 1000px) and (max-width: 1169px){
+a.logo {
+    margin: 1px 0px 0px 50px;
+}
+
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 999px){
+	
+	.sticky-wrapper{ height:500px;}
+	
+.container{ width:94%;}
+
+.logo {
+	width: 50%;
+}
+.menu_main {
+	width: 97%;
+	position: absolute;
+}
+.topbar-3 .left {
+	width: 60%;
+}
+.topbar-3 .right {
+	width: 40%;
+}
+.service-hover {
+  width: 240px;
+  padding-bottom:30px;
+  padding-top:15px;
+}
+
+}
+
+
+
+@media only screen and (min-width: 640px) and (max-width: 767px){
+
+
+.container{ width:94%;}
+.logo {
+	width: 50%;
+}
+.menu_main {
+	width: 97%;
+	position: absolute;
+}
+.topbar-3 .left {
+	width: 60%;
+}
+.topbar-3 .right {
+	width: 40%;
+}
+.service-hover {
+  width: 240px;
+  padding-bottom:30px;
+  padding-top:15px;
+}
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px){
+	
+.container{ width:94%;}
+
+.logo {
+	width: 100%;
+}
+.menu_main {
+	width: 97%;
+	position: absolute;
+}
+.topbar-3 .left {
+	width: 100%;
+	text-align: left;
+}
+.topbar-3 .right {
+	width: 100%;
+	text-align: left;
+}
+.topbar-3 ul.topsocial {
+	float: left;
+}
+
+.topbar-3 .left a {
+	margin-right: 1px;
+}
+.service-hover {
+  width: 300px;
+  padding-bottom:30px;
+  padding-top:15px;
+}
+.features_section-one .box {
+	padding: 25px 25px ;
+}
+
+
+}
+
+
+@media only screen and (max-width: 479px){
+
+.container{ width:94%;}
+.logo {
+	width: 100%;
+}
+.menu_main {
+	width: 97%;
+	position: absolute;
+}
+.topbar-3 .left {
+	width: 100%;
+	text-align: left;
+}
+.topbar-3 .right {
+	width: 100%;
+	text-align: left;
+}
+.topbar-3 ul.topsocial {
+	float: left;
+}
+
+.topbar-3 .left a {
+	margin-right: 1px;
+}
+.service-hover {
+  width: 300px;
+  padding-bottom:30px;
+  padding-top:15px;
+}
+.features_section-one .box {
+	padding: 25px 25px ;
+}
+
+}
