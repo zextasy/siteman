@@ -82,7 +82,7 @@
                                     @endforeach
                                 </td>
                                 <td>
-                                    <a href="{{url('admin/users/show/'.$user->id)}}"><i class="btn btn-warning btn-xs"> View</i></a>
+                                    <a href="{{ route('admin.users.show',[$user->id]) }}"><i class="btn btn-warning btn-xs"> View</i></a>
                                     <a href="{{ route('admin.users.edit',[$user->id]) }}" class="btn btn-xs btn-info">@lang('global.app_edit')</a>
                                     {!! Form::open(array(
                                         'style' => 'display: inline-block;',

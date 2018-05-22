@@ -68,6 +68,18 @@ class UsersController extends Controller
         return redirect()->route('admin.users.index');
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+        $human = User::where('id', $id)->get();
+        return view('admin.users.show', compact('human'));
+    }
 
     /**
      * Show the form for editing User.

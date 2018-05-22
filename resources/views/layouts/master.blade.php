@@ -25,7 +25,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
+@yield('styles_top')
 <!-- Template's stylesheets -->
 <link href="{{url('dist/css/style.css?ver=1.2')}}" rel="stylesheet" type="text/css">
 <link href="{{url('dist/css/reset.css?ver=2.1')}}" rel="stylesheet" type="text/css">
@@ -160,7 +160,7 @@
 <!--Template's Scripts -->
 @yield('extras')
 
-
+<script type="text/javascript" src="{{url('js/jquery.dataTables.min.js')}}"></script>
 <script type="text/javascript" src="{{url('dist/js/universal/jquery.js')}}"></script>
 <script type="text/javascript" src="{{url('js/jquery-latest.min.js')}}"></script>
 <script type="text/javascript" src="{{url('js/select2.min.js?ver=4.3')}}"></script>
@@ -204,7 +204,7 @@ The following part can be removed on Server for On Demand Loading) -->
 <script type="text/javascript" src="{{url('dist/js/revolution-slider/js/extensions/revolution.extension.navigation.min.js')}}"></script>
 <script type="text/javascript" src="{{url('dist/js/revolution-slider/js/extensions/revolution.extension.parallax.min.js')}}"></script>
 <script type="text/javascript" src="{{url('dist/js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
-<script type="text/javascript" src="{{url('js/jquery.dataTables.min.js')}}"></script>
+
 <script type="text/javascript" src="{{url('dist/js/revolution-slider/js/extensions/revolution.extension.video.min.js')}}"></script>
 
 

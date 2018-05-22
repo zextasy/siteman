@@ -26,12 +26,18 @@ class DashboardController extends Controller
     {
         //
         if ( Gate::allows('view_dashboard')) {
-            $users = User::orderBy('created_at', 'desc')->get();
+             // get all roles, for 
+            $roles = \Spatie\Permission\Models\Role::all();
+
+            // $users = User::orderBy('created_at', 'desc')->get();
+            $users = User::with('roles')->get();
+            $users_admin = $users->filter(function ($user, $key) {return $user->hasRole('admin');});
+            $users_engineer = $users->filter(function ($user, $key) {return $user->hasRole('Site Engineers');});
             $tasks = Task::orderBy('created_at', 'DESC')->with(['assignedBy', 'project', 'assignedTo'])->get();
             $projects = Project::orderBy('created_at', 'DESC')->with(['creator'])->get();
             $reports = Value::all();
 
-            return view('dashboard.index', compact('users', 'tasks', 'projects', 'reports'));
+            return view('dashboard.index', compact('users', 'users_admin', 'users_engineer', 'tasks', 'projects', 'reports')); //'
 
         }
         else {

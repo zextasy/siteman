@@ -68,7 +68,9 @@
             <div class="col-md-4">
               <div class="fileinput text-center fileinput-new" data-provides="fileinput">
                     <div class="fileinput-new thumbnail img-circle">
+                      @if(isset($user->profile_image))
                         <img src="{{url($user->profile_image)}}" alt="...">
+                      @endif
                     </div>
                 </div>
             </div>
