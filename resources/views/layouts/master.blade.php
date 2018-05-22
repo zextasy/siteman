@@ -113,7 +113,7 @@
             </div>
     @yield('contents')
   </div>
-  
+  @yield('homeindex')
   <!-- END REVOLUTION SLIDER WRAPPER -->
 <div class="clearfix"></div>
 

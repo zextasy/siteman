@@ -4,7 +4,7 @@
 
 @stop
 
-@section('contents')
+@section('homeindex')
 
 <div class="slide-tmargin">
     <div class="slidermaxwidth">
