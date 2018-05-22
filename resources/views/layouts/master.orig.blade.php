@@ -57,7 +57,7 @@
 <!-- NProgress -->
 
 <style type="text/css">
-    .modal-dialog {
+	.modal-dialog {
   margin-top: 0;
   margin-bottom: 0;
   height: 90vh;
@@ -122,7 +122,7 @@
   <!-- end parallax section 6 -->
   <div class="clearfix"></div>
    @if(Auth::check())
-    <footer class="footer1">
+	<footer class="footer1">
 
 
 <div class="clearfix"></div>
@@ -147,11 +147,11 @@
     </div>
     <!-- end copyright info -->
 
-    </footer>
+	</footer>
     @endif
 
-    <a href="#" class="scrollup"></a><!-- end scroll to top of the page-->
-     <input type="hidden" id="base" value="{{url('')}}" />
+	<a href="#" class="scrollup"></a><!-- end scroll to top of the page-->
+	 <input type="hidden" id="base" value="{{url('')}}" />
 
 
 </div>
@@ -210,95 +210,95 @@ The following part can be removed on Server for On Demand Loading) -->
 
 
 <script type="text/javascript">
-    var tpj=jQuery;
-    var revapi4;
-    tpj(document).ready(function() {
-    if(tpj("#rev_slider").revolution == undefined){
-    revslider_showDoubleJqueryError("#rev_slider");
-    }else{
-        revapi4 = tpj("#rev_slider").show().revolution({
-        sliderType:"standard",
-        jsFileLocation:"js/revolution-slider/js/",
-        sliderLayout:"auto",
-        dottedOverlay:"none",
-        delay:9000,
-        navigation: {
-        keyboardNavigation:"off",
-        keyboard_direction: "horizontal",
-        mouseScrollNavigation:"off",
-        onHoverStop:"off",
-        arrows: {
-        style:"erinyen",
-        enable:true,
-        hide_onmobile:true,
-        hide_under:778,
-        hide_onleave:true,
-        hide_delay:200,
-        hide_delay_mobile:1200,
-        tmp:'',
-        left: {
-        h_align:"left",
-        v_align:"center",
-        h_offset:80,
-        v_offset:0
-        },
-        right: {
-        h_align:"right",
-        v_align:"center",
-        h_offset:80,
-        v_offset:0
-        }
-        }
-        ,
-        touch:{
-        touchenabled:"on",
-        swipe_threshold: 75,
-        swipe_min_touches: 1,
-        swipe_direction: "horizontal",
-        drag_block_vertical: false
-    }
-    ,
+	var tpj=jQuery;
+	var revapi4;
+	tpj(document).ready(function() {
+	if(tpj("#rev_slider").revolution == undefined){
+	revslider_showDoubleJqueryError("#rev_slider");
+	}else{
+		revapi4 = tpj("#rev_slider").show().revolution({
+		sliderType:"standard",
+		jsFileLocation:"js/revolution-slider/js/",
+		sliderLayout:"auto",
+		dottedOverlay:"none",
+		delay:9000,
+		navigation: {
+		keyboardNavigation:"off",
+		keyboard_direction: "horizontal",
+		mouseScrollNavigation:"off",
+		onHoverStop:"off",
+		arrows: {
+		style:"erinyen",
+		enable:true,
+		hide_onmobile:true,
+		hide_under:778,
+		hide_onleave:true,
+		hide_delay:200,
+		hide_delay_mobile:1200,
+		tmp:'',
+		left: {
+		h_align:"left",
+		v_align:"center",
+		h_offset:80,
+		v_offset:0
+		},
+		right: {
+		h_align:"right",
+		v_align:"center",
+		h_offset:80,
+		v_offset:0
+		}
+		}
+		,
+		touch:{
+		touchenabled:"on",
+		swipe_threshold: 75,
+		swipe_min_touches: 1,
+		swipe_direction: "horizontal",
+		drag_block_vertical: false
+	}
+	,
 
 
 
-    },
-        viewPort: {
-        enable:true,
-        outof:"pause",
-        visible_area:"80%"
-    },
+	},
+		viewPort: {
+		enable:true,
+		outof:"pause",
+		visible_area:"80%"
+	},
 
-    responsiveLevels:[1240,1024,778,480],
-    gridwidth:[1240,1024,778,480],
-     gridheight: [868,748, 748, 680],
-    lazyType:"smart",
-        parallax: {
-        type:"mouse",
-        origo:"slidercenter",
-        speed:2000,
-        levels:[2,3,4,5,6,7,12,16,10,50],
-        },
-    shadow:0,
-    spinner:"off",
-    stopLoop:"off",
-    stopAfterLoops:-1,
-    stopAtSlide:-1,
-    shuffle:"off",
-    autoHeight:"off",
-    hideThumbsOnMobile:"off",
-    hideSliderAtLimit:0,
-    hideCaptionAtLimit:0,
-    hideAllCaptionAtLilmit:0,
-    disableProgressBar:"on",
-    debugMode:false,
-        fallbacks: {
-        simplifyAll:"off",
-        nextSlideOnWindowFocus:"off",
-        disableFocusListener:false,
-        }
-    });
-    }
-    }); /*ready*/
+	responsiveLevels:[1240,1024,778,480],
+	gridwidth:[1240,1024,778,480],
+	 gridheight: [868,748, 748, 680],
+	lazyType:"smart",
+		parallax: {
+		type:"mouse",
+		origo:"slidercenter",
+		speed:2000,
+		levels:[2,3,4,5,6,7,12,16,10,50],
+		},
+	shadow:0,
+	spinner:"off",
+	stopLoop:"off",
+	stopAfterLoops:-1,
+	stopAtSlide:-1,
+	shuffle:"off",
+	autoHeight:"off",
+	hideThumbsOnMobile:"off",
+	hideSliderAtLimit:0,
+	hideCaptionAtLimit:0,
+	hideAllCaptionAtLilmit:0,
+	disableProgressBar:"on",
+	debugMode:false,
+		fallbacks: {
+		simplifyAll:"off",
+		nextSlideOnWindowFocus:"off",
+		disableFocusListener:false,
+		}
+	});
+	}
+	});	/*ready*/
 </script>
 <script type="text/javascript">
                 var tpj = jQuery;
@@ -320,13 +320,13 @@ The following part can be removed on Server for On Demand Loading) -->
                             gridwidth: [1000, 1024, 778, 480],
                             gridheight: [520, 420, 420, 720],
                             lazyType: "none",
-                            parallax: {
-                                    type:"mouse+scroll",
-                                    origo:"slidercenter",
-                                    speed:2000,
-                                    levels:[1,2,3,20,25,30,35,40,45,50],
-                                    disable_onmobile:"on"
-                                },
+							parallax: {
+									type:"mouse+scroll",
+									origo:"slidercenter",
+									speed:2000,
+									levels:[1,2,3,20,25,30,35,40,45,50],
+									disable_onmobile:"on"
+								},
                             shadow: 0,
                             spinner: "spinner2",
                             autoHeight: "off",
@@ -372,8 +372,8 @@ The following part can be removed on Server for On Demand Loading) -->
 
 
 <script type="text/javascript">
-     BASE = document.getElementById('base').value;
-    function edit(title, url, name) {
+	 BASE = document.getElementById('base').value;
+	function edit(title, url, name) {
 
 
       var modal_title = document.getElementById('modal-title');
@@ -399,7 +399,7 @@ The following part can be removed on Server for On Demand Loading) -->
 
     function edit_attr(title, url, attr_id, name) {
 
-    //alert(BASE+'/'+url+'/'+attr_id+'/'+name);
+	//alert(BASE+'/'+url+'/'+attr_id+'/'+name);
       var modal_title = document.getElementById('modal-title');
       modal_title.innerHTML = title;
         var modal_body = document.getElementById('modal-body');

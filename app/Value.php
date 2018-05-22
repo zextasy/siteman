@@ -45,4 +45,5 @@ class Value extends Model
           else{
             echo '<span class="label label-warning">Pending</span>';  
           }
+    }
 }

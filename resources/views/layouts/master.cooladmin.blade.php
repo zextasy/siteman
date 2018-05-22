@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from gsrthemes.com/nixon/index10.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Dec 2017 11:11:41 GMT -->
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible"  content="IE=edge">
-<title>SiteMan | Molcom Multi-Concepts</title>
-<meta name="keywords" content="" />
-<meta name="description" content="">
-<meta name="author" content="">
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge">
+    <title>SiteMan | Molcom Multi-Concepts</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<!-- Mobile view -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title Page-->
+    <title>Dashboard 3</title>
 
-<!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+    <!-- Fontfaces CSS-->
+    <link href="{{url('cooladmin/css/font-face.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('cooladmin/vendor/font-awesome-4.7/css/font-awesome.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('cooladmin/vendor/font-awesome-5/css/fontawesome-all.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('cooladmin/vendor/mdi-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet" media="all">
 
+    <!-- Bootstrap CSS-->
+    <link href="{{url('cooladmin/vendor/bootstrap-4.1/bootstrap.min.css')}}" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="{{url('cooladmin/vendor/animsition/animsition.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('cooladmin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('cooladmin/vendor/wow/animate.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('cooladmin/vendor/css-hamburgers/hamburgers.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('cooladmin/vendor/slick/slick.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('cooladmin/vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('cooladmin/vendor/perfect-scrollbar/perfect-scrollbar.css')}}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{url('cooladmin/css/theme.css')}}" rel="stylesheet" media="all">
+    <!--Original Template's Styles -->
 <!-- Favicon -->
 <link rel="shortcut icon" href="#">
 
@@ -57,7 +74,7 @@
 <!-- NProgress -->
 
 <style type="text/css">
-    .modal-dialog {
+  .modal-dialog {
   margin-top: 0;
   margin-bottom: 0;
   height: 90vh;
@@ -77,18 +94,57 @@
 @yield('styles')
 </head>
 
-<body>
+<body class="animsition">
+    <div class="page-wrapper">
+      @yield('navbar')
 
-<div class="site-wrapper">
-<div id="header">
-    @yield('navbar')
-  </div>
-  <!--end menu-->
-  <div class="clearfix"></div>
+        <!-- PAGE CONTENT-->
+        <div class="page-content--bgf7">
+            <!-- BREADCRUMB-->
+{{--             <section class="au-breadcrumb2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="au-breadcrumb-content">
+                                <div class="au-breadcrumb-left">
+                                    <span class="au-breadcrumb-span">You are here:</span>
+                                    <ul class="list-unstyled list-inline au-breadcrumb__list">
+                                        <li class="list-inline-item active">
+                                            <a href="#">Home</a>
+                                        </li>
+                                        <li class="list-inline-item seprate">
+                                            <span>/</span>
+                                        </li>
+                                        <li class="list-inline-item">Dashboard</li>
+                                    </ul>
+                                </div>
+                                <form class="au-form-icon--sm" action="" method="post">
+                                    <input class="au-input--w300 au-input--style2" type="text" placeholder="Search for datas &amp; reports...">
+                                    <button class="au-btn--submit2" type="submit">
+                                        <i class="zmdi zmdi-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> --}}
+            <!-- END BREADCRUMB-->
 
-
-  <!-- START REVOLUTION SLIDER 5.0 -->
-  <div class="container">
+            <!-- WELCOME-->
+{{--             <section class="welcome p-t-10">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="title-4">Welcome back
+                                <span>John!</span>
+                            </h1>
+                            <hr class="line-seprate">
+                        </div>
+                    </div>
+                </div>
+            </section> --}}
+            <!-- END WELCOME-->
                 <div class="row">
                 <div class="col-md-12">
 
@@ -112,53 +168,50 @@
                 </div>
             </div>
     @yield('contents')
-  </div>
-  
-  <!-- END REVOLUTION SLIDER WRAPPER -->
-<div class="clearfix"></div>
+            
 
+            <!-- COPYRIGHT-->
+            <section class="p-t-60 p-b-20">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="copyright">
+                                <p>Copyright © 2018 Molcom Multi-Concepts Limited All rights reserved.</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END COPYRIGHT-->
+        </div>
 
-
-  <!-- end parallax section 6 -->
-  <div class="clearfix"></div>
-   @if(Auth::check())
-    <footer class="footer1">
-
-
-<div class="clearfix"></div>
-
-    <div class="copyright_info1">
-    <div class="container">
-
-    <div class="clearfix divider_dashed10"></div>
-
-
-    <div class="col-md-6 col-sm-6">
-    <ul class="footer_social_links1">
-    <li class="animate" data-anim-type="zoomIn" data-anim-delay="300"><a href="#"><i class="fa fa-facebook"></i></a></li>
-    <li class="animate" data-anim-type="zoomIn" data-anim-delay="300"><a href="#"><i class="fa fa-twitter"></i></a></li>
-    <li class="animate" data-anim-type="zoomIn" data-anim-delay="300"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-    <li class="animate" data-anim-type="zoomIn" data-anim-delay="300"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-    <li class="animate" data-anim-type="zoomIn" data-anim-delay="300"><a href="#"><i class="fa fa-rss"></i></a></li>
-    </ul>
     </div>
-    <div class="col-md-6 col-sm-6"> Copyright © 2018 Molcom Multi-Concepts Limited All rights reserved. </div>
-    </div>
-    </div>
-    <!-- end copyright info -->
+    @yield('extras')
 
-    </footer>
-    @endif
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
 
-    <a href="#" class="scrollup"></a><!-- end scroll to top of the page-->
-     <input type="hidden" id="base" value="{{url('')}}" />
-
-
-</div>
-
-
-<!--Template's Scripts -->
-@yield('extras')
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+<!--Original Template's Scripts -->
 
 
 <script type="text/javascript" src="{{url('dist/js/universal/jquery.js')}}"></script>
@@ -210,95 +263,95 @@ The following part can be removed on Server for On Demand Loading) -->
 
 
 <script type="text/javascript">
-    var tpj=jQuery;
-    var revapi4;
-    tpj(document).ready(function() {
-    if(tpj("#rev_slider").revolution == undefined){
-    revslider_showDoubleJqueryError("#rev_slider");
-    }else{
-        revapi4 = tpj("#rev_slider").show().revolution({
-        sliderType:"standard",
-        jsFileLocation:"js/revolution-slider/js/",
-        sliderLayout:"auto",
-        dottedOverlay:"none",
-        delay:9000,
-        navigation: {
-        keyboardNavigation:"off",
-        keyboard_direction: "horizontal",
-        mouseScrollNavigation:"off",
-        onHoverStop:"off",
-        arrows: {
-        style:"erinyen",
-        enable:true,
-        hide_onmobile:true,
-        hide_under:778,
-        hide_onleave:true,
-        hide_delay:200,
-        hide_delay_mobile:1200,
-        tmp:'',
-        left: {
-        h_align:"left",
-        v_align:"center",
-        h_offset:80,
-        v_offset:0
-        },
-        right: {
-        h_align:"right",
-        v_align:"center",
-        h_offset:80,
-        v_offset:0
-        }
-        }
-        ,
-        touch:{
-        touchenabled:"on",
-        swipe_threshold: 75,
-        swipe_min_touches: 1,
-        swipe_direction: "horizontal",
-        drag_block_vertical: false
+  var tpj=jQuery;
+  var revapi4;
+  tpj(document).ready(function() {
+  if(tpj("#rev_slider").revolution == undefined){
+  revslider_showDoubleJqueryError("#rev_slider");
+  }else{
+    revapi4 = tpj("#rev_slider").show().revolution({
+    sliderType:"standard",
+    jsFileLocation:"js/revolution-slider/js/",
+    sliderLayout:"auto",
+    dottedOverlay:"none",
+    delay:9000,
+    navigation: {
+    keyboardNavigation:"off",
+    keyboard_direction: "horizontal",
+    mouseScrollNavigation:"off",
+    onHoverStop:"off",
+    arrows: {
+    style:"erinyen",
+    enable:true,
+    hide_onmobile:true,
+    hide_under:778,
+    hide_onleave:true,
+    hide_delay:200,
+    hide_delay_mobile:1200,
+    tmp:'',
+    left: {
+    h_align:"left",
+    v_align:"center",
+    h_offset:80,
+    v_offset:0
+    },
+    right: {
+    h_align:"right",
+    v_align:"center",
+    h_offset:80,
+    v_offset:0
+    }
     }
     ,
+    touch:{
+    touchenabled:"on",
+    swipe_threshold: 75,
+    swipe_min_touches: 1,
+    swipe_direction: "horizontal",
+    drag_block_vertical: false
+  }
+  ,
 
 
 
+  },
+    viewPort: {
+    enable:true,
+    outof:"pause",
+    visible_area:"80%"
+  },
+
+  responsiveLevels:[1240,1024,778,480],
+  gridwidth:[1240,1024,778,480],
+   gridheight: [868,748, 748, 680],
+  lazyType:"smart",
+    parallax: {
+    type:"mouse",
+    origo:"slidercenter",
+    speed:2000,
+    levels:[2,3,4,5,6,7,12,16,10,50],
     },
-        viewPort: {
-        enable:true,
-        outof:"pause",
-        visible_area:"80%"
-    },
-
-    responsiveLevels:[1240,1024,778,480],
-    gridwidth:[1240,1024,778,480],
-     gridheight: [868,748, 748, 680],
-    lazyType:"smart",
-        parallax: {
-        type:"mouse",
-        origo:"slidercenter",
-        speed:2000,
-        levels:[2,3,4,5,6,7,12,16,10,50],
-        },
-    shadow:0,
-    spinner:"off",
-    stopLoop:"off",
-    stopAfterLoops:-1,
-    stopAtSlide:-1,
-    shuffle:"off",
-    autoHeight:"off",
-    hideThumbsOnMobile:"off",
-    hideSliderAtLimit:0,
-    hideCaptionAtLimit:0,
-    hideAllCaptionAtLilmit:0,
-    disableProgressBar:"on",
-    debugMode:false,
-        fallbacks: {
-        simplifyAll:"off",
-        nextSlideOnWindowFocus:"off",
-        disableFocusListener:false,
-        }
-    });
+  shadow:0,
+  spinner:"off",
+  stopLoop:"off",
+  stopAfterLoops:-1,
+  stopAtSlide:-1,
+  shuffle:"off",
+  autoHeight:"off",
+  hideThumbsOnMobile:"off",
+  hideSliderAtLimit:0,
+  hideCaptionAtLimit:0,
+  hideAllCaptionAtLilmit:0,
+  disableProgressBar:"on",
+  debugMode:false,
+    fallbacks: {
+    simplifyAll:"off",
+    nextSlideOnWindowFocus:"off",
+    disableFocusListener:false,
     }
-    }); /*ready*/
+  });
+  }
+  }); /*ready*/
 </script>
 <script type="text/javascript">
                 var tpj = jQuery;
@@ -320,13 +373,13 @@ The following part can be removed on Server for On Demand Loading) -->
                             gridwidth: [1000, 1024, 778, 480],
                             gridheight: [520, 420, 420, 720],
                             lazyType: "none",
-                            parallax: {
-                                    type:"mouse+scroll",
-                                    origo:"slidercenter",
-                                    speed:2000,
-                                    levels:[1,2,3,20,25,30,35,40,45,50],
-                                    disable_onmobile:"on"
-                                },
+              parallax: {
+                  type:"mouse+scroll",
+                  origo:"slidercenter",
+                  speed:2000,
+                  levels:[1,2,3,20,25,30,35,40,45,50],
+                  disable_onmobile:"on"
+                },
                             shadow: 0,
                             spinner: "spinner2",
                             autoHeight: "off",
@@ -372,8 +425,8 @@ The following part can be removed on Server for On Demand Loading) -->
 
 
 <script type="text/javascript">
-     BASE = document.getElementById('base').value;
-    function edit(title, url, name) {
+   BASE = document.getElementById('base').value;
+  function edit(title, url, name) {
 
 
       var modal_title = document.getElementById('modal-title');
@@ -399,7 +452,7 @@ The following part can be removed on Server for On Demand Loading) -->
 
     function edit_attr(title, url, attr_id, name) {
 
-    //alert(BASE+'/'+url+'/'+attr_id+'/'+name);
+  //alert(BASE+'/'+url+'/'+attr_id+'/'+name);
       var modal_title = document.getElementById('modal-title');
       modal_title.innerHTML = title;
         var modal_body = document.getElementById('modal-body');
@@ -411,8 +464,7 @@ The following part can be removed on Server for On Demand Loading) -->
 </script>
 
 @include('shared.modal')
-
 </body>
 
-<!-- Mirrored from gsrthemes.com/nixon/index10.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Dec 2017 11:11:42 GMT -->
 </html>
+<!-- end document-->

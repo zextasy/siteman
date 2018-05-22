@@ -18,7 +18,7 @@ class DashboardController extends Controller
          $this->middleware('auth');
     }
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource  .
      *
      * @return \Illuminate\Http\Response
      */
