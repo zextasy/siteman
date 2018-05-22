@@ -3,22 +3,56 @@
 
 @section('navbar')
  @include('shared.navbar', ['active' => strtolower($active_page ?? 'Users') ])
-<div >
-        <p>Users</p>
-         <div class="pagenation">&nbsp;<a href="{{url('home')}}">Home</a>  <i>/</i>Roles</div>
-         <br><br>
-     </div>
+
 @stop
 @section('contents')
-    <h3 class="page-title">@lang('global.users.title')</h3>
-    <p>
+<style type="text/css">
+    .btn-info{
+        background-color: #4c0019;
+        border-color: #4c0019;
+    }
+
+    .btn-primary{
+        background-color: #ff8100;
+        border-color: #ff8100;
+
+    }
+
+    .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary{
+        background-color: #081c22;
+        border-color: #081c22;
+    }
+
+    .btn-info.active, .btn-info.focus, .btn-info:active, .btn-info:focus, .btn-info:hover, .open>.dropdown-toggle.btn-info{
+        background-color: #081c22;
+        border-color: #081c22;
+    }
+</style>
+
+<div class="page_title ">
+        <div class="container">
+
+        <h1>Users</h1>
+         <div class="pagenation">&nbsp;<a href="{{ route('admin.users.create') }}" class="btn btn-primary">@lang('global.app_add_new')</a>  <i>/</i>Users</div>
+         <br><br>
+        <!--  <div class=" pull-right">
+           <a class="btn btn-primary" href="#">
+             New User
+           </a>
+        </div> -->
+
+        </div>
+     </div>
+    <!-- <h3 class="page-title">@lang('global.users.title')</h3> -->
+    <!-- <p>
         <a href="{{ route('admin.users.create') }}" class="btn btn-success">@lang('global.app_add_new')</a>
-    </p>
+    </p> -->
+    <br><br>
 
     <div class="panel panel-default">
-        <div class="panel-heading">
+        <!-- <div class="panel-heading">
             @lang('global.app_list')
-        </div>
+        </div> -->
 
         <div class="panel-body table-responsive">
             <table class="table table-bordered table-striped {{ count($users) > 0 ? 'datatable' : '' }} dt-select">
@@ -33,7 +67,7 @@
 
                     </tr>
                 </thead>
-                
+
                 <tbody>
                     @if (count($users) > 0)
                         @foreach ($users as $user)
@@ -48,6 +82,7 @@
                                     @endforeach
                                 </td>
                                 <td>
+                                    <a href="{{url('admin/users/show/'.$user->id)}}"><i class="btn btn-warning btn-xs"> View</i></a>
                                     <a href="{{ route('admin.users.edit',[$user->id]) }}" class="btn btn-xs btn-info">@lang('global.app_edit')</a>
                                     {!! Form::open(array(
                                         'style' => 'display: inline-block;',
@@ -71,7 +106,7 @@
     </div>
 @stop
 
-@section('javascript') 
+@section('javascript')
     <script>
         window.route_mass_crud_entries_destroy = '{{ route('admin.users.mass_destroy') }}';
     </script>
