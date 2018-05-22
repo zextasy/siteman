@@ -3,7 +3,7 @@
 
         <div class="navbar-header">
           <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle two three"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-          <a href="index.html" class="navbar-brand"><img src="{{url('images/siteman.png')}}" alt=""/ style="height: 60px"></a> </div>
+          <a href="/home" class="navbar-brand"><img src="{{url('images/siteman.png')}}" alt=""/ style="height: 60px"></a> </div>
 
         <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
           <ul class="nav navbar-nav">
