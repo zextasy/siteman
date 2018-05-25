@@ -46,4 +46,20 @@ class Value extends Model
             echo '<span class="label label-warning">Pending</span>';  
           }
     }
+
+        public function showApprovalStatus()
+    {
+          if($this->approval_status == 1){
+            echo '<span class="label label-success">Approved</span>';
+          }
+          elseif($this->approval_status == 2){
+            echo'<span class="label label-danger">Rejected</span>';
+          }
+          elseif($this->approval_status == 3){
+            echo'<span class="label label-success">Completed</span>';
+          }          
+          else{
+            echo '<span class="label label-warning">Pending</span>';  
+          }
+    }
 }

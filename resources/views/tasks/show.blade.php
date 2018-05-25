@@ -112,6 +112,12 @@
   <tr><td><strong>Assigned By</strong></td>
   <td><h5>{{$tasks->assignedBy->name}}</h5></td></tr>
   {{-- {{$tasks->reports}} --}}
+    <tr><td><strong>Reports</strong></td>
+  <td></td></tr>
+  @foreach($tasks->reports as $report)
+  <tr><td><strong>{{$report->form->name}}</strong></td>
+  <td><strong>Status: {{$report->showStatus()}}</strong></td></tr>
+  @endforeach
 
 
 

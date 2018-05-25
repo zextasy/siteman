@@ -58,7 +58,7 @@
             <table class="table table-bordered table-striped {{ count($users) > 0 ? 'datatable' : '' }} dt-select">
                 <thead>
                     <tr>
-                        <th style="text-align:center;">{{-- <input type="checkbox" id="select-all" /> --}}</th>
+                        <th style="text-align:center;"><input type="checkbox" id="select-all" /></th>
 
                         <th>@lang('global.users.fields.name')</th>
                         <th>@lang('global.users.fields.email')</th>

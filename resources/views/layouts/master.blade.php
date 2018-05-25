@@ -75,6 +75,20 @@
 }
 </style>
 @yield('styles')
+<!-- Datatables, base54 -->
+<link rel="stylesheet"
+      href="{{ url('css') }}/jquery-ui.css">
+<link rel="stylesheet"
+      href="{{ url('css/jquery.dataTables.min.css') }}"/>
+<link rel="stylesheet"
+      href="{{ url('css') }}/select.dataTables.min.css"/>
+<link rel="stylesheet"
+      href="{{ url('css') }}/buttons.dataTables.min.css"/>
+<link rel="stylesheet"
+      href="{{ url('css') }}/jquery-ui-timepicker-addon.min.css"/>
+<link rel="stylesheet"
+      href="{{ url('css') }}/bootstrap-datepicker.standalone.min.css"/>
+      <!--End Datatables, base54 -->
 </head>
 
 <body>
@@ -111,8 +125,8 @@
 
                 </div>
             </div>
-    @yield('contents')
   </div>
+  @yield('contents')
   @yield('homeindex')
   <!-- END REVOLUTION SLIDER WRAPPER -->
 <div class="clearfix"></div>
@@ -156,11 +170,30 @@
 
 </div>
 
-
+<!--Datatables, base54 -->
+{{-- <script type="text/javascript" src="{{url('js/jquery.dataTables.min.js')}}"></script> --}}
+<script src="{{url('js/b54')}}/jquery-1.11.3.min.js"></script>
+<script src="{{url('js/b54')}}/jquery.dataTables.min.js"></script>
+<script src="{{url('js/b54')}}/dataTables.buttons.min.js"></script>
+<script src="{{url('js/b54')}}/buttons.flash.min.js"></script>
+<script src="{{url('js/b54')}}/jszip.min.js"></script>
+<script src="{{url('js/b54')}}/pdfmake.min.js"></script>
+<script src="{{url('js/b54')}}/vfs_fonts.js"></script>
+<script src="{{url('js/b54')}}/buttons.html5.min.js"></script>
+<script src="{{url('js/b54')}}/buttons.print.min.js"></script>
+<script src="{{url('js/b54')}}/buttons.colVis.min.js"></script>
+<script src="{{url('js/b54')}}/dataTables.select.min.js"></script>
+<script src="{{url('js/b54')}}/jquery-ui.min.js"></script>
+<script src="{{ url('adminlte/js') }}/bootstrap.min.js"></script>
+{{-- <script src="{{ url('adminlte/js') }}/select2.full.min.js"></script> --}}
+<script src="{{ url('adminlte/js') }}/main.js"></script>
+<script src="{{ url('adminlte/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
+<script src="{{ url('adminlte/plugins/fastclick/fastclick.js') }}"></script>
+<script src="{{ url('adminlte/js/app.min.js') }}"></script>
+<!--End datatables, base54 -->
 <!--Template's Scripts -->
 @yield('extras')
 
-<script type="text/javascript" src="{{url('js/jquery.dataTables.min.js')}}"></script>
 <script type="text/javascript" src="{{url('dist/js/universal/jquery.js')}}"></script>
 <script type="text/javascript" src="{{url('js/jquery-latest.min.js')}}"></script>
 <script type="text/javascript" src="{{url('js/select2.min.js?ver=4.3')}}"></script>

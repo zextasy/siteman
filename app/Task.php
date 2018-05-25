@@ -48,6 +48,6 @@ class Task extends Model
     }
     public function reports()
     {
-      return $this->hasMany(Value::class,'site_id', 'id');
+      return $this->hasMany(Value::class,'site_id', 'id'); // rewrite to use taks id after migration
     }
 }

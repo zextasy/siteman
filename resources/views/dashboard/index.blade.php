@@ -20,6 +20,30 @@
 
         <!-- /top navigation -->
 
+        <!-- calculations -->
+        @php
+            $users_engineer_percentage = ($users_engineer->count() / $users->count()) * 100; 
+            $users_admin_percentage = ($users_admin->count() / $users->count()) * 100;
+            $users_others_count = $users->count() - ($users_engineer->count() + $users_admin->count() );
+            $users_others_percentage = ($users_others_count / $users->count()) * 100;
+            $projects_completed = $projects->where('status', 2);
+            $projects_completed_percentage = ($projects_completed->count()/$projects->count()) * 100;
+            $projects_pending = $projects->where('status', 0);
+            $projects_pending_percentage = ($projects_pending->count()/$projects->count()) * 100;
+            $tasks_completed = $tasks->where('task_status_id', 2);
+            $tasks_completed_percentage = ($tasks_completed->count()/$tasks->count()) * 100;
+            $tasks_pending = $tasks->where('task_status_id', 0);
+            $tasks_pending_percentage = ($tasks_pending->count()/$tasks->count()) * 100;
+            $reports_pending = $reports->where('approval_status', 0);
+            $reports_pending_percentage = ($reports_pending->count()/$reports->count()) * 100;
+            $reports_approved = $reports->where('approval_status', 1);
+            $reports_approved_percentage = ($reports_approved->count()/$reports->count()) * 100;
+            $reports_rejected = $reports->where('approval_status', 2);
+            $reports_rejected_percentage = ($reports_rejected->count()/$reports->count()) * 100;
+        @endphp
+
+        <!-- caclulations -->
+
         <!-- page content -->
         <div class="right_col" role="main">  
           <!-- top tiles -->
@@ -32,23 +56,23 @@
               <span class="count_bottom"><i >{{ $users->count() - ($users_engineer->count() + $users_admin->count() ) }}</i> others</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Tasks</span>
-              <div class="count">{{ $tasks->count() }}</div>
-              <span class="count_bottom"><i >{{ $tasks->where('task_status_id', 2)->count() }} </i> completed</span>
-              <span class="count_bottom"><i >{{ $tasks->where('task_status_id', 0)->count() }}</i> pending</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Projects</span>
               <div class="count">{{ $projects->count() }}</div>
-              <span class="count_bottom"><i >{{ $projects->where('created_by', 1)->count() }}</i> completed</span>
-              <span class="count_bottom"><i >{{ $projects->where('created_by', 0)->count() }}</i> pending</span>
+              <span class="count_bottom"><i >{{ $projects_completed->count() }}</i> completed</span>
+              <span class="count_bottom"><i >{{ $projects_pending->count() }}</i> pending</span>
             </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Tasks</span>
+              <div class="count">{{ $tasks->count() }}</div>
+              <span class="count_bottom"><i >{{ $tasks_completed->count() }} </i> completed</span>
+              <span class="count_bottom"><i >{{ $tasks_pending->count() }}</i> pending</span>
+            </div>            
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Reports</span>
               <div class="count">{{ $reports->count() }}</div>
-              <span class="count_bottom"><i >{{ $reports->where('approval_status', 0)->count() }}</i> pending</span>
-              <span class="count_bottom"><i >{{ $reports->where('approval_status', 1)->count() }}</i> approved</span>
-              <span class="count_bottom"><i >{{ $reports->where('approval_status', 2)->count() }}</i> rejected</span>
+              <span class="count_bottom"><i >{{ $reports_pending->count() }}</i> pending</span>
+              <span class="count_bottom"><i >{{ $reports_approved->count() }}</i> approved</span>
+              <span class="count_bottom"><i >{{ $reports_rejected->count() }}</i> rejected</span>
             </div> 
           </div>
           <!-- /top tiles -->
@@ -71,13 +95,13 @@
                     </div>
                     <div class="w_center w_55">
                       <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="{{ $users->count()/2 }}" aria-valuemin="0" aria-valuemax="{{ $users->count() }}" style="width: 66%;">
-                          <span class="sr-only">60% Complete</span>
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="{{ $users_admin->count() }}" aria-valuemin="0" aria-valuemax="{{ $users->count() }}" style="width: {{ $users_admin_percentage }}%;">
+                          <span class="sr-only">{{ $users_admin->count() }} of {{ $users->count() }} users</span>
                         </div>
                       </div>
                     </div>
                     <div class="w_right w_20">
-                      <span>{{ $users->count() }}</span>
+                      <span>{{ $users_admin->count() }}</span>
                     </div>
                     <div class="clearfix"></div>
                   </div>
@@ -88,13 +112,30 @@
                     </div>
                     <div class="w_center w_55">
                       <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="{{ $users->count()/2}}" aria-valuemin="0" aria-valuemax="{{ $users->count() }}" style="width: {{ $users->count()/2 }}%;">
-                          <span class="sr-only">60% Complete</span>
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="{{ $users_engineer->count() }}" aria-valuemin="0" aria-valuemax="{{ $users->count() }}" style="width: {{ $users_engineer_percentage }}%;">
+                          <span class="sr-only">{{ $users_engineer->count() }} of {{ $users->count() }} users</span>
                         </div>
                       </div>
                     </div>
                     <div class="w_right w_20">
-                      <span>{{ $users->count() }}</span>
+                      <span>{{ $users_engineer->count() }}</span>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                <div class="widget_summary">
+                    <div class="w_left w_25">
+                      <span>Others</span>
+                    </div>
+                    <div class="w_center w_55">
+                      <div class="progress">
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="{{ $users_others_count }}" aria-valuemin="0" aria-valuemax="{{ $users->count() }}" style="width: {{ $users_others_percentage }}%;">
+                          <span class="sr-only">{{ $users_others_count }} of {{ $users->count() }} users</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w_right w_20">
+                      <span>{{ $users_others_count }}</span>
                     </div>
                     <div class="clearfix"></div>
                   </div>
@@ -117,13 +158,13 @@
                     </div>
                     <div class="w_center w_55">
                       <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                          <span class="sr-only">60% Complete</span>
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="{{$projects_completed->count()}}" aria-valuemin="0" aria-valuemax="{{$projects->count()}}" style="width: {{$projects_completed_percentage}}%;">
+                          <span class="sr-only">{{ $projects_completed->count() }} of {{ $projects->count() }} projects</span>
                         </div>
                       </div>
                     </div>
                     <div class="w_right w_20">
-                      <span>123k</span>
+                      <span>{{$projects_completed->count()}}</span>
                     </div>
                     <div class="clearfix"></div>
                   </div>
@@ -134,13 +175,13 @@
                     </div>
                     <div class="w_center w_55">
                       <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-                          <span class="sr-only">60% Complete</span>
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="{{$projects_pending->count()}}" aria-valuemin="0" aria-valuemax="{{$projects->count()}}" style="width: {{$projects_pending_percentage}}%;">
+                          <span class="sr-only">{{ $projects_pending->count() }} of {{ $projects->count() }} projects</span>
                         </div>
                       </div>
                     </div>
                     <div class="w_right w_20">
-                      <span>53k</span>
+                      <span>{{$projects_pending->count()}}</span>
                     </div>
                     <div class="clearfix"></div>
                   </div>
@@ -152,7 +193,7 @@
 <!-- End first row -->
 <!-- Start second row -->
               <div class="row">
-                <!-- Start tasks -->
+<!-- Start tasks -->
             <div class="col-md-4 col-sm-4 col-xs-12">
               <div class="x_panel tile fixed_height_320">
                 <div class="x_title">
@@ -167,13 +208,13 @@
                     </div>
                     <div class="w_center w_55">
                       <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                          <span class="sr-only">60% Complete</span>
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="{{$tasks_completed->count()}}" aria-valuemin="0" aria-valuemax="{{$tasks->count()}}" style="width: {{$tasks_completed_percentage}}%;">
+                          <span class="sr-only">{{ $tasks_completed->count() }} of {{ $tasks->count() }} tasks</span>
                         </div>
                       </div>
                     </div>
                     <div class="w_right w_20">
-                      <span>123k</span>
+                      <span>{{$tasks_completed->count()}}</span>
                     </div>
                     <div class="clearfix"></div>
                   </div>
@@ -184,23 +225,22 @@
                     </div>
                     <div class="w_center w_55">
                       <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-                          <span class="sr-only">60% Complete</span>
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="{{$tasks_pending->count()}}" aria-valuemin="0" aria-valuemax="{{$tasks->count()}}" style="width: {{$tasks_pending_percentage}}%;">
+                          <span class="sr-only">{{ $tasks_pending->count() }} of {{ $tasks->count() }} tasks</span>
                         </div>
                       </div>
                     </div>
                     <div class="w_right w_20">
-                      <span>53k</span>
+                      <span>{{$tasks_pending->count()}}</span>
                     </div>
                     <div class="clearfix"></div>
                   </div>
                 </div>
               </div>
             </div>
-                <!-- End projects -->
+<!-- End tasks -->
 
-                <!-- start of reports widget -->
-
+<!-- Start reports -->
             <div class="col-md-4 col-sm-4 col-xs-12">
               <div class="x_panel tile fixed_height_320">
                 <div class="x_title">
@@ -209,19 +249,37 @@
                 </div>
                 <div class="x_content">
                   <h4>Report Summary</h4>
+
+                  <div class="widget_summary">
+                    <div class="w_left w_25">
+                      <span>Pending</span>
+                    </div>
+                    <div class="w_center w_55">
+                      <div class="progress">
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="{{$reports_pending->count()}}" aria-valuemin="0" aria-valuemax="{{$reports->count()}}" style="width: {{$reports_pending_percentage}}%;">
+                          <span class="sr-only">{{ $reports_pending->count() }} of {{ $reports->count() }} reports</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w_right w_20">
+                      <span>{{$reports_pending->count()}}</span>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
                   <div class="widget_summary">
                     <div class="w_left w_25">
                       <span>Approved</span>
                     </div>
                     <div class="w_center w_55">
                       <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                          <span class="sr-only">60% Complete</span>
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="{{$reports_approved->count()}}" aria-valuemin="0" aria-valuemax="{{$reports->count()}}" style="width: {{$reports_approved_percentage}}%;">
+                          <span class="sr-only">{{ $reports_approved->count() }} of {{ $reports->count() }} reports</span>
                         </div>
                       </div>
                     </div>
                     <div class="w_right w_20">
-                      <span>123k</span>
+                      <span>{{$reports_approved->count()}}</span>
                     </div>
                     <div class="clearfix"></div>
                   </div>
@@ -232,19 +290,20 @@
                     </div>
                     <div class="w_center w_55">
                       <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-                          <span class="sr-only">60% Complete</span>
+                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="{{$reports_rejected->count()}}" aria-valuemin="0" aria-valuemax="{{$reports->count()}}" style="width: {{$reports_rejected_percentage}}%;">
+                          <span class="sr-only">{{ $reports_rejected->count() }} of {{ $reports->count() }} reports</span>
                         </div>
                       </div>
                     </div>
                     <div class="w_right w_20">
-                      <span>53k</span>
+                      <span>{{$reports_rejected->count()}}</span>
                     </div>
                     <div class="clearfix"></div>
                   </div>
                 </div>
               </div>
-            </div> <!-- end of reports widget -->
+            </div>
+<!-- End reports -->
                 
               </div> <!-- end of second row -->
               
