@@ -54,8 +54,8 @@ class User extends Authenticatable
         if ($input)
             $this->attributes['password'] = app('hash')->needsRehash($input) ? Hash::make($input) : $input;
     }
-    
-    
+
+
     public function role()
     {
         return $this->belongsToMany(Role::class, 'role_user');
@@ -65,5 +65,11 @@ class User extends Authenticatable
       // return $this->hasMany(Task::class, 'id', 'assigned_to');
       return Task::where('assigned_to', $this->id)->get();//
     }
+
+    public function mailmessages()
+    {
+        return $this->belongsToMany(MailMessage::class);
+    }
+
 
 }

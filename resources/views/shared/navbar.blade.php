@@ -76,6 +76,7 @@
                                 </a>
 
                                 <ul class="dropdown-menu">
+                                   <li><a href="{{url('mailmessages/')}}">My Mails</a></li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

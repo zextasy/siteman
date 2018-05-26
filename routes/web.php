@@ -89,10 +89,14 @@ Route::delete('tasks/delete/{id}', 'TasksController@destroy');
 Route::get('tasks/approve/{id}', 'TasksController@approve');
 Route::patch('tasks/approve/{id}', 'TasksController@update_approve');
 
+Route::get('mailmessages/', 'MessagesController@index');
+Route::get('mailmessages/create', 'MessagesController@create');
+Route::post('mailmessages/create', 'MessagesController@sendMail');
+
 // Route::get('mail/admins/sendMail', 'AdminsController@sentMail');
 // Route::post('mail/admins/sendMail', 'AdminsController@sendMail');
 // Route::get('mail/admins/', 'AdminsController@index');
-// Route::get('mail/admins/recievedMail/{id}', 'AdminsController@show'); 
+// Route::get('mail/admins/recievedMail/{id}', 'AdminsController@show');
 
 Route::get('users/admin/', 'UsersController@index');
 Route::get('users/admin/create', 'UsersController@create');

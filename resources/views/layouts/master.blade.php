@@ -418,6 +418,18 @@ The following part can be removed on Server for On Demand Loading) -->
       $('#modal-body').load(BASE+'/'+url+'/'+name);
     }
 
+     function create(title, url) {
+
+
+      var modal_title = document.getElementById('modal-title');
+      modal_title.innerHTML = title;
+        var modal_body = document.getElementById('modal-body');
+
+
+      modal_body.innerHTML = '<div class="text-info">Just a minute. Please, wait...</div>';
+      $('#modal-body').load(BASE+'/'+url);
+    }
+
     function del(title, url, name) {
 
 
@@ -428,6 +440,30 @@ The following part can be removed on Server for On Demand Loading) -->
 
       modal_body.innerHTML = '<div class="text-info">Just a minute. Please, wait...</div>';
       $('#modal-body').load(BASE+'/'+url+'/'+name);
+    }
+
+     function del_mail(title, url, id) {
+
+
+      var modal_title = document.getElementById('modal-title');
+      modal_title.innerHTML = title;
+        var modal_body = document.getElementById('modal-body');
+
+
+      modal_body.innerHTML = '<div class="text-info">Just a minute. Please, wait...</div>';
+      $('#modal-body').load(BASE+'/'+url+'/'+id);
+    }
+
+     function edit_mail(title, url, id) {
+
+    //alert(BASE+'/'+url+'/'+attr_id+'/'+name);
+      var modal_title = document.getElementById('modal-title');
+      modal_title.innerHTML = title;
+        var modal_body = document.getElementById('modal-body');
+
+
+      modal_body.innerHTML = '<div class="text-info">Just a minute. Please, wait...</div>';
+      $('#modal-body').load(BASE+'/'+url+'/'+id);
     }
 
     function edit_attr(title, url, attr_id, name) {
