@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 // use GeniusTS\Roles\Contracts\HasRoleAndPermission as HasRoleAndPermissionContract;
 use Spatie\Permission\Traits\HasRoles;
 use Hash;
+use App\Notifications\MailNotification;
 
 class User extends Authenticatable
 //class User extends Model implements AuthenticatableContract, CanResetPasswordContract, HasRoleAndPermissionContract

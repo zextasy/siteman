@@ -4,7 +4,7 @@
     <label for="multiple" class="control-label">To</label>
   </div>
   <div class="col-md-10">
-    <select id="#" name="general_infos[]" class="form-group" multiple="" tabindex="-1" aria-hidden="true" style="width:100%; border:0px;">
+    <select id="#" name="[]" class="form-group" multiple="" tabindex="-1" aria-hidden="true" style="width:100%; border:0px;">
       @foreach($human as $user)
         <option value="{{$user->id}}">{{$user->name}}</option>
       @endforeach

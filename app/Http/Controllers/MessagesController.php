@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Notification;
 use App\User;
+use Auth;
+use App\Message;
+use App\Notifications\MailNotification;
 
 class MessagesController extends Controller
 {
@@ -24,8 +28,11 @@ class MessagesController extends Controller
     {
         //
         $human = User::with(['mailmessages'])->where('id', \Auth::user()->user_id)->first();
+        $users = User::all();
+        // $notifications = \Auth::user()->notifications;
+        $notifications = Message::where('to',\Auth::user()->id)->get();
 
-        return view('mailmessages.index', compact('mailmessages', 'user', 'human'));
+        return view('mailmessages.index', compact('mailmessages', 'users', 'human', 'notifications'));
     }
 
     /**
@@ -36,6 +43,8 @@ class MessagesController extends Controller
     public function create()
     {
         //
+        //$humans = User::orderBy('name')->get();
+       // return view('mailmessages.create', compact('humans'));
     }
 
     public function sendMail(Request $request)
@@ -60,6 +69,7 @@ class MessagesController extends Controller
         //$message->app_name = config('app.name');
         $message->save();
 
+        Notification::send($human, new MailNotification($message));
         //$message->attach($geninfo_ids);
 
 
@@ -72,6 +82,30 @@ class MessagesController extends Controller
         }
 
         return redirect()->back();
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function notify(Request $request)
+    {
+        // var_dump($request->input('user_id'));
+         $sender = \Auth::user();
+         $recipient = User::where('id', $request->input('user_id'))->first();
+         $subject= $request->input('subject');
+         $content = $request->input('content');
+         $message = new Message;
+         $message->setAttribute('from',$sender->id);
+         $message->setAttribute('to',$recipient->id);
+         $message->setAttribute('subject',$subject);
+         $message->setAttribute('content',$content);
+         $message->save();
+        Notification::send($sender, new MailNotification($recipient));
+        flash('Message sent', 'success');
+         return redirect()->back();
     }
 
     /**

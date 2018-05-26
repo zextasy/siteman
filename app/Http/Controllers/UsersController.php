@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\userRegMail;
 
 use Illuminate\Support\Facades\Gate;
+use App\Notifications\MailNotification;
 
 
 class UsersController extends Controller
