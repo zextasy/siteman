@@ -93,6 +93,7 @@ Route::get('mailmessages/', 'MessagesController@index');
 Route::get('mailmessages/create', 'MessagesController@create');
 Route::post('mailmessages/create', 'MessagesController@sendMail');
 Route::post('mailmessages/notify', 'MessagesController@notify');
+// Route::patch('mailmessages/notify', 'MessagesController@show_notify');
 
 // Route::get('mail/admins/sendMail', 'AdminsController@sentMail');
 // Route::post('mail/admins/sendMail', 'AdminsController@sendMail');

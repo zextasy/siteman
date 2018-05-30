@@ -58,7 +58,7 @@
         <div class="row">
           <div class=" text-center">
             <div class="row">
-              <a data-toggle="modal" data-target="#messageModal"  class="btn btn-default btn-primary"> Compose</a>
+              <a data-toggle="modal" data-target="#messageCreateModal"  class="btn btn-default btn-primary"> Compose</a>
               <!-- <a href="{{url('mailmessages/create')}}" class="btn btn-default btn-primary"> Compose</a> -->
             </div>
             <div class="row side-mess">
@@ -94,12 +94,15 @@
             </td>
             <td class="60%">
               <!-- <a href="{{url('employees/mails/showReceivedMail/'.$notification->id)}}"> -->
-              <b>{{$notification->subject}} - </b> {{str_limit($notification->content, 30)}}
+                <a data-toggle="modal" data-target="#messageShowModal-{{$notification->id}}" data-subject="{{$notification->subject}}" data-content="{{$notification->content}}" class=""><b>{{$notification->subject}} - </b></a> {{str_limit($notification->content, 30)}}
+
             </td>
             <td class="10%">
-              {{$notification->created_at->format('H:i:s')}}
+              <!-- {{$notification->created_at->format('H:i:s')}} -  -->{{$notification->created_at, date('M j, Y')}}
             </td>
+
           </tr>
+          @include('shared.message_show_modal', ['notification' => $notification])
           @endforeach
         </tbody>
       </table>
@@ -108,4 +111,18 @@
   </div>
 </div>
 @include('shared.message_modal')
+@stop
+@section('extras')
+<script>
+$('#messageShowModal').on('show', function(e) {
+    var link     = e.relatedTarget(),
+        modal    = $(this),
+        subject = link.data("subject"),
+        content    = link.data("content");
+      var modal_content = document.getElementById('form9');
+      modal_content.innerHTML = 'content';
+    modal.find("#form42").val('subject');
+    // modal.find("#form9").innerHTML = content;
+});
+</script>
 @stop

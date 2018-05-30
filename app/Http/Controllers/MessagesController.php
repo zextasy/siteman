@@ -119,6 +119,11 @@ class MessagesController extends Controller
         //
     }
 
+    public function edit_notifiy($id)
+    {
+        //
+    }
+
     /**
      * Display the specified resource.
      *
