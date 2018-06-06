@@ -75,76 +75,76 @@ $(function(){
 
 })(jQuery);
 
-//Master Sliders
+// //Master Sliders
 
-// Slide 1
+// // Slide 1
 
-(function($) {
- "use strict";
-	var slider = new MasterSlider();
-	// adds Arrows navigation control to the slider.
-	slider.control('arrows');
-	slider.control('bullets');
+// (function($) {
+//  "use strict";
+// 	var slider = new MasterSlider();
+// 	// adds Arrows navigation control to the slider.
+// 	slider.control('arrows');
+// 	slider.control('bullets');
 	
-	slider.setup('masterslider2' , {
-		 width:1600,    // slider standard width
-		 height:750,   // slider standard height
-		 space:0,
-		 speed:45,
-		 layout:'fullwidth',
-		 loop:true,
-		 preload:0,
-		 autoplay:true,
-		 view:"parallaxMask"
-	});
-})(jQuery);
+// 	slider.setup('masterslider2' , {
+// 		 width:1600,    // slider standard width
+// 		 height:750,   // slider standard height
+// 		 space:0,
+// 		 speed:45,
+// 		 layout:'fullwidth',
+// 		 loop:true,
+// 		 preload:0,
+// 		 autoplay:true,
+// 		 view:"parallaxMask"
+// 	});
+// })(jQuery);
 
 
-//=============================
+// //=============================
 
-(function($) {
- "use strict";
-	var slider = new MasterSlider();
-	// adds Arrows navigation control to the slider.
-	slider.control('arrows');
-	slider.control('bullets');
+// (function($) {
+//  "use strict";
+// 	var slider = new MasterSlider();
+// 	// adds Arrows navigation control to the slider.
+// 	slider.control('arrows');
+// 	slider.control('bullets');
 	
-	slider.setup('masterslider' , {
-		 width:1600,    // slider standard width
-		 height:600,   // slider standard height
-		 space:0,
-		 speed:45,
-		 layout:'fullwidth',
-		 loop:true,
-		 preload:0,
-		 autoplay:true,
-		 view:"parallaxMask"
-	});
-})(jQuery);
+// 	slider.setup('masterslider' , {
+// 		 width:1600,    // slider standard width
+// 		 height:600,   // slider standard height
+// 		 space:0,
+// 		 speed:45,
+// 		 layout:'fullwidth',
+// 		 loop:true,
+// 		 preload:0,
+// 		 autoplay:true,
+// 		 view:"parallaxMask"
+// 	});
+// })(jQuery);
 
 
-//=====================================
+// //=====================================
 
 
-(function($) {
- "use strict";
-	var slider = new MasterSlider();
-	// adds Arrows navigation control to the slider.
-	slider.control('arrows');
-	slider.control('bullets');
+// (function($) {
+//  "use strict";
+// 	var slider = new MasterSlider();
+// 	// adds Arrows navigation control to the slider.
+// 	slider.control('arrows');
+// 	slider.control('bullets');
 	
-	slider.setup('masterslider3' , {
-		 width:1170,    // slider standard width
-		 height:550,   // slider standard height
-		 space:0,
-		 speed:45,
-		 layout:'false',
-		 loop:true,
-		 preload:0,
-		 autoplay:true,
-		 view:"parallaxMask"
-	});
-})(jQuery);
+// 	slider.setup('masterslider3' , {
+// 		 width:1170,    // slider standard width
+// 		 height:550,   // slider standard height
+// 		 space:0,
+// 		 speed:45,
+// 		 layout:'false',
+// 		 loop:true,
+// 		 preload:0,
+// 		 autoplay:true,
+// 		 view:"parallaxMask"
+// 	});
+// })(jQuery);
 
 
 

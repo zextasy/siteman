@@ -172,28 +172,28 @@
 
 <!--Datatables, base54 -->
 {{-- <script type="text/javascript" src="{{url('js/jquery.dataTables.min.js')}}"></script> --}}
-<script type="text/javascript"> src="{{url('js/b54')}}/jquery-1.11.3.min.js"></script>
-<script type="text/javascript"> src="{{url('js/b54')}}/jquery.dataTables.min.js"></script>
-<script type="text/javascript"> src="{{url('js/b54')}}/dataTables.buttons.min.js"></script>
-<script type="text/javascript"> src="{{url('js/b54')}}/buttons.flash.min.js"></script>
-<script type="text/javascript"> src="{{url('js/b54')}}/jszip.min.js"></script>
-<script type="text/javascript"> src="{{url('js/b54')}}/pdfmake.min.js"></script>
-<script type="text/javascript"> src="{{url('js/b54')}}/vfs_fonts.js"></script>
-<script type="text/javascript"> src="{{url('js/b54')}}/buttons.html5.min.js"></script>
-<script type="text/javascript"> src="{{url('js/b54')}}/buttons.print.min.js"></script>
-<script type="text/javascript"> src="{{url('js/b54')}}/buttons.colVis.min.js"></script>
-<script type="text/javascript"> src="{{url('js/b54')}}/dataTables.select.min.js"></script>
-<script type="text/javascript"> src="{{url('js/b54')}}/jquery-ui.min.js"></script>
-<script type="text/javascript"> src="{{ url('adminlte/js') }}/main.js"></script>
-<script type="text/javascript"> src="{{ url('adminlte/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
-<script type="text/javascript"> src="{{ url('adminlte/plugins/fastclick/fastclick.js') }}"></script>
-<script type="text/javascript"> src="{{ url('adminlte/js/app.min.js') }}"></script>
+<script type="text/javascript" src="{{url('js/b54')}}/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="{{url('js/b54')}}/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="{{url('js/b54')}}/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="{{url('js/b54')}}/buttons.flash.min.js"></script>
+<script type="text/javascript" src="{{url('js/b54')}}/jszip.min.js"></script>
+<script type="text/javascript" src="{{url('js/b54')}}/pdfmake.min.js"></script>
+<script type="text/javascript" src="{{url('js/b54')}}/vfs_fonts.js"></script>
+<script type="text/javascript" src="{{url('js/b54')}}/buttons.html5.min.js"></script>
+<script type="text/javascript" src="{{url('js/b54')}}/buttons.print.min.js"></script>
+<script type="text/javascript" src="{{url('js/b54')}}/buttons.colVis.min.js"></script>
+<script type="text/javascript" src="{{url('js/b54')}}/dataTables.select.min.js"></script>
+<script type="text/javascript" src="{{url('js/b54')}}/jquery-ui.min.js"></script>
+<script type="text/javascript" src="{{ url('adminlte/js') }}/main.js"></script>
+<script type="text/javascript" src="{{ url('adminlte/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
+<script type="text/javascript" src="{{ url('adminlte/plugins/fastclick/fastclick.js') }}"></script>
+<script type="text/javascript" src="{{ url('adminlte/js/app.min.js') }}"></script>
 <!--End datatables, base54 -->
 <!--Template's Scripts -->
 @yield('extras')
 @yield('javascript')
-<script type="text/javascript" src="{{url('dist/js/universal/jquery.js')}}"></script>
-<script type="text/javascript" src="{{url('js/jquery-latest.min.js')}}"></script>
+{{-- <script type="text/javascript" src="{{url('dist/js/universal/jquery.js')}}"></script>
+<script type="text/javascript" src="{{url('js/jquery-latest.min.js')}}"></script> --}}
 <script type="text/javascript" src="{{url('js/select2.min.js?ver=4.3')}}"></script>
 
 <script src="{{url('dist/js/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
@@ -204,8 +204,8 @@
 <script src="{{url('dist/js/mainmenu/customeUI.js')}}"></script>
 <script src="{{url('dist/js/mainmenu/jquery.sticky.js')}}"></script>
 <script src="{{url('dist/js/scripts/functions.js')}}" type="text/javascript"></script>
-<script src="{{url('dist/js/style-customizer/js/spectrum.html')}}"></script>
-<script src="{{url('dist/js/less/less.min.html')}}" data-env="development"></script>
+{{-- <script src="{{url('dist/js/style-customizer/js/spectrum.html')}}"></script>
+<script src="{{url('dist/js/less/less.min.html')}}" data-env="development"></script> --}}
 <script src="{{url('dist/js/accordion/js/smk-accordion.js')}}"></script>
 <script src="{{url('dist/js/accordion/js/custom.js')}}"></script>
 <script src="{{url('dist/js/tabs/assets/js/responsive-tabs.min.js')}}"></script>
