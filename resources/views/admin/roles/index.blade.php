@@ -21,7 +21,7 @@
         </div>
 
         <div class="panel-body table-responsive">
-            <table class="table table-bordered table-striped {{ count($roles) > 0 ? 'datatable' : '' }} dt-select">
+            <table id="example2" class="table table-bordered table-striped {{ count($roles) > 0 ? 'datatable' : '' }} dt-select">
                 <thead>
                     <tr>
                         <th style="text-align:center;">{{-- <input type="checkbox" id="select-all" /> --}}</th>
@@ -69,4 +69,17 @@
     <script>
         window.route_mass_crud_entries_destroy = '{{ route('admin.roles.mass_destroy') }}';
     </script>
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>    
 @endsection
